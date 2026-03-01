@@ -9,3 +9,9 @@ CREATE TABLE Loan (
     
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );
+
+INSERT INTO Loan VALUES
+(401, 'Home Loan', 1500000.00, 120, 8.5, 1),
+(402, 'Car Loan', 500000.00, 60, 9.0, 2),
+(403, 'Education Loan', 300000.00, 48, 7.5, 3),
+(404, 'Personal Loan', 200000.00, 36, 10.0, 4);
