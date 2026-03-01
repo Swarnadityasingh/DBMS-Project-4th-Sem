@@ -228,7 +228,7 @@ The ER diagram visually represents:
 * Primary Keys
 * Foreign Keys
 * Cardinality (1:M) relationships
-[ER Diagram.png](https://github.com/Swarnadityasingh/DBMS-Project-4th-Sem/blob/8999aeb16ff397e81c986ecb59da72aee0c4221a/ER%20Diagram.png)
+![Uploading image.png…]()
 
 # 👨‍💻 Project Team
 
