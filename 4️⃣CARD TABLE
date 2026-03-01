@@ -9,3 +9,9 @@ CREATE TABLE Card (
     
     FOREIGN KEY (account_no) REFERENCES Account(account_no)
 );
+
+INSERT INTO Card VALUES
+(3001, 'Debit', '2028-12-31', '2023-01-15', 1234, 1001),
+(3002, 'Debit', '2028-11-30', '2023-02-20', 2345, 1002),
+(3003, 'Credit', '2029-10-31', '2023-03-25', 3456, 1003),
+(3004, 'Debit', '2028-09-30', '2023-04-30', 4567, 1004);
