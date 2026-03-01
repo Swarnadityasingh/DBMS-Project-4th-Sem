@@ -28,7 +28,7 @@ The system implements:
 
 * 🗄️ **MySQL** – Database creation & management
 * 🖥️ **MySQL Workbench** – Query execution & schema design
-* 📊 **Draw.io** – ER Diagram creation
+* 📊 **Excalidraw** – ER Diagram creation
 * 🌐 **GitHub** – Version control & project hosting
 
 ---
@@ -40,9 +40,6 @@ The system implements:
 📊 ER Diagram Representation
 🛡️ Data Integrity using Constraints
 👥 Multi-user Support
-🔐 Role-Based Access Control (RBAC)
-📈 Fully Normalized (Up to 3NF)
-📦 Scalable & Extendable Architecture
 
 ---
 
