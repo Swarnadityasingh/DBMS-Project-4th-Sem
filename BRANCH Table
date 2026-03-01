@@ -1,0 +1,6 @@
+CREATE TABLE Branch (
+    branch_id INT PRIMARY KEY,
+    branch_name VARCHAR(100),
+    IFSC_code VARCHAR(20),
+    city VARCHAR(50)
+);
