@@ -9,8 +9,8 @@ CREATE TABLE Transactions (
     FOREIGN KEY (account_no) REFERENCES Account(account_no)
 );
 
-INSERT INTO Account VALUES
-(1001, 50000.00, 'Savings', '2023-01-10', 1, 101),
-(1002, 75000.00, 'Current', '2023-02-15', 2, 102),
-(1003, 62000.00, 'Savings', '2023-03-20', 3, 103),
-(1004, 88000.00, 'Savings', '2023-04-25', 4, 104);
+INSERT INTO Transactions VALUES
+(201, '2024-01-10', 'Deposit', 10000.00, 1001),
+(202, '2024-01-15', 'Withdrawal', 5000.00, 1002),
+(203, '2024-02-01', 'Transfer', 7000.00, 1003),
+(204, '2024-02-10', 'Deposit', 12000.00, 1004);
