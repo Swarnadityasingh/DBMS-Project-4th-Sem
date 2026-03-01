@@ -1,0 +1,2 @@
+CREATE DATABASE Banking_System;
+USE Banking_System;
