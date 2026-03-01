@@ -1,13 +1,11 @@
--- BRANCH TABLE
-
 CREATE TABLE Branch (
-    branch_id INT PRIMARY KEY AUTO_INCREMENT,
+    branch_id INT PRIMARY KEY,
     branch_name VARCHAR(100),
     IFSC_code VARCHAR(20),
     city VARCHAR(50)
 );
 
-INSERT INTO Branch VALUES
+INSERT INTO Branch (branch_id, branch_name, IFSC_code, city) VALUES
 ('Connaught Place Branch', 'SBIN0001', 'Delhi'),
 ('Bandra Branch', 'SBIN0002', 'Mumbai'),
 ('Hazratganj Branch', 'SBIN0003', 'Lucknow'),
