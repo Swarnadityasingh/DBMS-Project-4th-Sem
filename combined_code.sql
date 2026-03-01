@@ -1,9 +1,9 @@
+```sql
 CREATE DATABASE banking_system;
 USE banking_system;
 
--- ===============================
+
 -- Table: Customer
--- ===============================
 CREATE TABLE Customer (
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
@@ -21,9 +21,7 @@ INSERT INTO Customer (first_name, last_name, dob, phone, email, address) VALUES
 ('Kavya', 'Srivastava', '2006-11-30', '9090909090', 'kavya@gmail.com', 'Hyderabad');
 
 
--- ===============================
 -- Table: Branch
--- ===============================
 CREATE TABLE Branch (
     branch_id INT PRIMARY KEY AUTO_INCREMENT,
     branch_name VARCHAR(100),
@@ -38,9 +36,7 @@ INSERT INTO Branch (branch_name, IFSC_code, city) VALUES
 ('Banjara Hills Branch', 'SBIN0004', 'Hyderabad');
 
 
--- ===============================
 -- Table: Account
--- ===============================
 CREATE TABLE Account (
     account_no INT PRIMARY KEY AUTO_INCREMENT,
     balance DECIMAL(12,2),
@@ -59,9 +55,7 @@ INSERT INTO Account (balance, account_type, open_date, customer_id, branch_id) V
 (88000.00, 'Savings', '2023-04-25', 4, 4);
 
 
--- ===============================
 -- Table: Transactions
--- ===============================
 CREATE TABLE Transactions (
     transaction_id INT PRIMARY KEY AUTO_INCREMENT,
     transaction_date DATE,
@@ -78,9 +72,7 @@ INSERT INTO Transactions (transaction_date, transaction_type, amount, account_no
 ('2024-02-10', 'Deposit', 12000.00, 4);
 
 
--- ===============================
 -- Table: Card
--- ===============================
 CREATE TABLE Card (
     card_no INT PRIMARY KEY AUTO_INCREMENT,
     card_type VARCHAR(30),
@@ -98,9 +90,7 @@ INSERT INTO Card (card_type, expiry_date, create_date, card_pin, account_no) VAL
 ('Debit', '2028-09-30', '2023-04-30', 4567, 4);
 
 
--- ===============================
 -- Table: Loan
--- ===============================
 CREATE TABLE Loan (
     loan_id INT PRIMARY KEY AUTO_INCREMENT,
     loan_type VARCHAR(50),
@@ -118,9 +108,7 @@ INSERT INTO Loan (loan_type, loan_amount, duration, interest_rate, customer_id) 
 ('Personal Loan', 200000.00, 36, 10.0, 4);
 
 
--- ===============================
 -- Table: Employee
--- ===============================
 CREATE TABLE Employee (
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_name VARCHAR(100),
@@ -135,3 +123,5 @@ INSERT INTO Employee (employee_name, salary, designation, branch_id) VALUES
 ('Simran Kaur', 35000.00, 'Clerk', 2),
 ('Pooja Mehta', 40000.00, 'Cashier', 3),
 ('Isha Gupta', 38000.00, 'Officer', 4);
+
+```
