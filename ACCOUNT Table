@@ -1,0 +1,12 @@
+CREATE TABLE Account (
+    account_no INT PRIMARY KEY,
+    balance DECIMAL(12,2),
+    account_type VARCHAR(30),
+    open_date DATE,
+    
+    customer_id INT,
+    branch_id INT,
+    
+    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
+    FOREIGN KEY (branch_id) REFERENCES Branch(branch_id)
+);
