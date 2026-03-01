@@ -135,4 +135,5 @@ INSERT INTO Employee (employee_id, employee_name, salary, designation, branch_id
 (502, 'Sahej Mehmi', 35000.00, 'Clerk', 102),
 (503, 'Md Khubaib', 40000.00, 'Cashier', 103),
 (504, 'Arpit Srivastava', 38000.00, 'Officer', 104);
-```sql
+
+```
