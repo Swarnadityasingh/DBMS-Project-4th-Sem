@@ -4,13 +4,12 @@ CREATE TABLE Loan (
     loan_amount DECIMAL(12,2),
     duration INT,
     interest_rate DECIMAL(5,2),
-    
     customer_id INT,
     
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );
 
-INSERT INTO Loan VALUES
+INSERT INTO Loan (loan_id, loan_type, loan_amount, duration, interest_rate, customer_id)VALUES
 (401, 'Home Loan', 1500000.00, 120, 8.5, 1),
 (402, 'Car Loan', 500000.00, 60, 9.0, 2),
 (403, 'Education Loan', 300000.00, 48, 7.5, 3),
