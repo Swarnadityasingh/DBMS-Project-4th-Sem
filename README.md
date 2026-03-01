@@ -144,18 +144,6 @@ The system implements:
 
 ---
 
-# 🔐 User Roles & Permissions (RBAC)
-
-| Role                | Access Level                  |
-| ------------------- | ----------------------------- |
-| 🛡️ Admin           | Full access to all tables     |
-| 👨‍💼 Manager       | CRUD: Account, Loan, Employee |
-| 🧾 Teller           | CRUD: Customer, Transaction   |
-| 👤 Customer_Service | CRUD: Customer, Card          |
-| 📊 Auditor          | Read-only access              |
-
----
-
 # ⚙️ How to Use the Project
 
 ## Step 1️⃣: Install Required Tools
@@ -203,22 +191,6 @@ Example:
 SELECT * FROM Customer;
 ```
 
----
-
-## Step 5️⃣: Test Role-Based Access
-
-Login using different roles:
-
-* 🛡️ Admin
-* 👨‍💼 Manager
-* 🧾 Teller
-* 👤 Customer_Service
-* 📊 Auditor
-
-Verify permission restrictions.
-
----
-
 # 📈 ER Diagram
 
 The ER diagram visually represents:
@@ -229,12 +201,15 @@ The ER diagram visually represents:
 * Foreign Keys
 * Cardinality (1:M) relationships
 
+![ER Diagram](ER%20Diagram.png)
+
 # 👨‍💻 Project Team
 
 👤 Arpit Srivastava
 👤 Sahej Mehmi
 👤 Md. Khubaib
 👤 Swarnaditya Singh
+
 
 ---
 
