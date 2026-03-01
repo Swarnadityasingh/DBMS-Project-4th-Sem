@@ -7,3 +7,9 @@ CREATE TABLE Customer (
     email VARCHAR(100),
     address VARCHAR(255)
 );
+
+INSERT INTO Customer VALUES
+(1, 'Urvashi', 'Sharma', '2001-05-12', '9876543210', 'urvashi@gmail.com', 'Delhi'),
+(2, 'Ananya', 'Verma', '2000-08-21', '9123456780', 'ananya@gmail.com', 'Mumbai'),
+(3, 'Priya', 'Singh', '1999-03-15', '9988776655', 'priya@gmail.com', 'Lucknow'),
+(4, 'Kavya', 'Reddy', '2002-11-30', '9090909090', 'kavya@gmail.com', 'Hyderabad');
