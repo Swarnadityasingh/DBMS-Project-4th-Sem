@@ -229,7 +229,7 @@ The ER diagram visually represents:
 * Foreign Keys
 * Cardinality (1:M) relationships
 
-
+ER Diagram.png
 
 # 👨‍💻 Project Team
 
