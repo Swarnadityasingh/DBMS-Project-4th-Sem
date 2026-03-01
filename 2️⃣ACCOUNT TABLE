@@ -10,3 +10,9 @@ CREATE TABLE Account (
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
     FOREIGN KEY (branch_id) REFERENCES Branch(branch_id)
 );
+
+INSERT INTO Account VALUES
+(1001, 50000.00, 'Savings', '2023-01-10', 1, 101),
+(1002, 75000.00, 'Current', '2023-02-15', 2, 102),
+(1003, 62000.00, 'Savings', '2023-03-20', 3, 103),
+(1004, 88000.00, 'Savings', '2023-04-25', 4, 104);
