@@ -1,0 +1,11 @@
+CREATE TABLE Loan (
+    loan_id INT PRIMARY KEY,
+    loan_type VARCHAR(50),
+    loan_amount DECIMAL(12,2),
+    duration INT,
+    interest_rate DECIMAL(5,2),
+    
+    customer_id INT,
+    
+    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+);
