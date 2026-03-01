@@ -3,14 +3,13 @@ CREATE TABLE Employee (
     employee_name VARCHAR(100),
     salary DECIMAL(10,2),
     designation VARCHAR(50),
-    
     branch_id INT,
     
     FOREIGN KEY (branch_id) REFERENCES Branch(branch_id)
 );
 
-INSERT INTO Employee VALUES
-(501, 'Neha Kapoor', 45000.00, 'Manager', 101),
-(502, 'Simran Kaur', 35000.00, 'Clerk', 102),
-(503, 'Pooja Mehta', 40000.00, 'Cashier', 103),
-(504, 'Isha Gupta', 38000.00, 'Officer', 104);
+INSERT INTO Employee (employee_id, employee_name, salary, designation, branch_id) VALUES
+(501, 'Swarnaditya Singh', 45000.00, 'Manager', 101),
+(502, 'Sahej Mehmi', 35000.00, 'Clerk', 102),
+(503, 'Md Khubaib', 40000.00, 'Cashier', 103),
+(504, 'Arpit Srivastava', 38000.00, 'Officer', 104);
