@@ -1,4 +1,4 @@
-# 🏦 Banking Management System Database
+# 🏦 Banking System Database
 
 A fully structured **relational database project** built using **MySQL** to manage banking operations efficiently and securely.
 
