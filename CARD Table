@@ -1,0 +1,11 @@
+CREATE TABLE Card (
+    card_no INT PRIMARY KEY,
+    card_type VARCHAR(30),
+    expiry_date DATE,
+    create_date DATE,
+    card_pin INT,
+    
+    account_no INT,
+    
+    FOREIGN KEY (account_no) REFERENCES Account(account_no)
+);
