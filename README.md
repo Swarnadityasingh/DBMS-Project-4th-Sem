@@ -205,10 +205,10 @@ The ER diagram visually represents:
 
 # 👨‍💻 Project Team
 
-👤 Arpit Srivastava
+👤 Swarnaditya Singh
 👤 Sahej Mehmi
 👤 Md. Khubaib
-👤 Swarnaditya Singh
+👤 Arpit Srivastava
 
 
 ---
