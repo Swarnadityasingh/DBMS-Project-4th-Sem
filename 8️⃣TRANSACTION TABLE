@@ -3,13 +3,12 @@ CREATE TABLE Transactions (
     transaction_date DATE,
     transaction_type VARCHAR(30),
     amount DECIMAL(12,2),
-    
     account_no INT,
     
     FOREIGN KEY (account_no) REFERENCES Account(account_no)
 );
 
-INSERT INTO Transactions VALUES
+INSERT INTO Transactions (transaction_id, transaction_date, transaction_type, amount, account_no) VALUES
 (201, '2024-01-10', 'Deposit', 10000.00, 1001),
 (202, '2024-01-15', 'Withdrawal', 5000.00, 1002),
 (203, '2024-02-01', 'Transfer', 7000.00, 1003),
