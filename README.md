@@ -38,8 +38,6 @@ The system implements:
 ✅ Structured Relational Database Design
 🔗 Proper Foreign Key Relationships
 📊 ER Diagram Representation
-🛡️ Data Integrity using Constraints
-👥 Multi-user Support
 
 ---
 
@@ -165,7 +163,6 @@ This will:
 
 ✅ Create all tables
 🔗 Define foreign key relationships
-🛡️ Apply constraints
 🔐 Configure user roles (if included)
 
 ---
