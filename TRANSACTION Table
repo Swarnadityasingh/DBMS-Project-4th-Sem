@@ -1,0 +1,10 @@
+CREATE TABLE Transactions (
+    transaction_id INT PRIMARY KEY,
+    transaction_date DATE,
+    transaction_type VARCHAR(30),
+    amount DECIMAL(12,2),
+    
+    account_no INT,
+    
+    FOREIGN KEY (account_no) REFERENCES Account(account_no)
+);
