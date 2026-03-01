@@ -21,9 +21,6 @@ The system implements:
 * Relational database principles
 * Primary & Foreign key constraints
 * One-to-Many relationships
-* Data integrity enforcement
-* Role-based access control (RBAC)
-* Scalable and normalized schema design
 
 ---
 
