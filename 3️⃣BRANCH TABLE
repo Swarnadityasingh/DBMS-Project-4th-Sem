@@ -6,7 +6,23 @@ CREATE TABLE Branch (
 );
 
 INSERT INTO Branch (branch_id, branch_name, IFSC_code, city) VALUES
-('Connaught Place Branch', 'SBIN0001', 'Delhi'),
-('Bandra Branch', 'SBIN0002', 'Mumbai'),
-('Hazratganj Branch', 'SBIN0003', 'Lucknow'),
-('Banjara Hills Branch', 'SBIN0004', 'Hyderabad');
+(101, 'Connaught Place Branch', 'SBIN0001', 'Delhi'),
+(102, 'Bandra Branch', 'SBIN0002', 'Mumbai'),
+(103, 'Hazratganj Branch', 'SBIN0003', 'Lucknow'),
+(104, 'Banjara Hills Branch', 'SBIN0004', 'Hyderabad')
+(105, 'MG Road Branch', 'SBIN0005', 'Bangalore'),
+(106, 'Park Street Branch', 'SBIN0006', 'Kolkata'),
+(107, 'Sector 17 Branch', 'SBIN0007', 'Chandigarh'),
+(108, 'Civil Lines Branch', 'SBIN0008', 'Allahabad'),
+(109, 'Rajouri Garden Branch', 'SBIN0009', 'Delhi'),
+(110, 'Andheri Branch', 'SBIN0010', 'Mumbai'),
+(111, 'Gomti Nagar Branch', 'SBIN0011', 'Lucknow'),
+(112, 'Gachibowli Branch', 'SBIN0012', 'Hyderabad'),
+(113, 'Whitefield Branch', 'SBIN0013', 'Bangalore'),
+(114, 'Salt Lake Branch', 'SBIN0014', 'Kolkata'),
+(115, 'Mohali Branch', 'SBIN0015', 'Chandigarh'),
+(116, 'Katra Branch', 'SBIN0016', 'Varanasi'),
+(117, 'Karol Bagh Branch', 'SBIN0017', 'Delhi'),
+(118, 'Powai Branch', 'SBIN0018', 'Mumbai'),
+(119, 'Indira Nagar Branch', 'SBIN0019', 'Lucknow'),
+(120, 'Madhapur Branch', 'SBIN0020', 'Hyderabad');
