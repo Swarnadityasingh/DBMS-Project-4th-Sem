@@ -9,11 +9,11 @@ A fully structured **relational database project** built using **MySQL** to mana
 The **Banking Management System Database** is designed to manage and organize information related to:
 
 * 👤 Customers
-* 🏦 Bank Accounts
-* 🏢 Branches
-* 💳 Cards
+* 🏢 Branches 
+* 🏦 Accounts
 * 💰 Loans
-* 💳 Transactions
+* 📠 Transactions
+* 💳 Cards
 * 👨‍💼 Employees
 
 The system implements:
@@ -203,7 +203,6 @@ The ER diagram visually represents:
 
 
 ---
-
 # 📜 License
 
 This project is created for **educational and academic purposes only**.
