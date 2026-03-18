@@ -1,5 +1,3 @@
-USE Banking_System;
-
 CREATE TABLE Account (
     account_no INT PRIMARY KEY,
     balance DECIMAL(12,2),
