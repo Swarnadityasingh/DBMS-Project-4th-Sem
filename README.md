@@ -61,7 +61,16 @@ The system implements:
 
 ---
 
-## 2️⃣ Account
+## 2️⃣ Branch
+
+* `branch_id` (PK)
+* branch_name
+* IFSC_code
+* city
+
+---
+
+## 3️⃣ Account
 
 * `account_no` (PK)
 * balance
@@ -72,16 +81,18 @@ The system implements:
 
 ---
 
-## 3️⃣ Branch
+## 4️⃣ Loan
 
-* `branch_id` (PK)
-* branch_name
-* IFSC_code
-* city
+* `loan_id` (PK)
+* loan_type
+* loan_amount
+* duration
+* interest_rate
+* `customer_id` (FK → Customer)
 
 ---
 
-## 4️⃣ Transactions
+## 5️⃣ Transactions
 
 * `transaction_id` (PK)
 * transaction_date
@@ -91,7 +102,7 @@ The system implements:
 
 ---
 
-## 5️⃣ Card
+## 6️⃣ Card
 
 * `card_no` (PK)
 * card_type
@@ -99,17 +110,6 @@ The system implements:
 * create_date
 * card_pin
 * `account_no` (FK → Account)
-
----
-
-## 6️⃣ Loan
-
-* `loan_id` (PK)
-* loan_type
-* loan_amount
-* duration
-* interest_rate
-* `customer_id` (FK → Customer)
 
 ---
 
