@@ -9,7 +9,7 @@ INSERT INTO Branch (branch_id, branch_name, IFSC_code, city) VALUES
 (101, 'Connaught Place Branch', 'SBIN0001', 'Delhi'),
 (102, 'Bandra Branch', 'SBIN0002', 'Mumbai'),
 (103, 'Hazratganj Branch', 'SBIN0003', 'Lucknow'),
-(104, 'Banjara Hills Branch', 'SBIN0004', 'Hyderabad')
+(104, 'Banjara Hills Branch', 'SBIN0004', 'Hyderabad'),
 (105, 'Noida Sector 18 Branch', 'SBIN0005', 'Noida'),
 (106, 'Kanpur Central Branch', 'SBIN0006', 'Kanpur'),
 (107, 'Amritsar Main Branch', 'SBIN0007', 'Amritsar'),
