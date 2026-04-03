@@ -1,13 +1,21 @@
 CREATE TABLE Account (
-    account_no INT PRIMARY KEY,
-    balance DECIMAL(12,2),
-    account_type VARCHAR(30),
-    open_date DATE,
-    customer_id INT,
-    branch_id INT,
-    
-    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
-    FOREIGN KEY (branch_id) REFERENCES Branch(branch_id)
+    account_no INT AUTO_INCREMENT PRIMARY KEY,
+    balance DECIMAL(12,2) DEFAULT 0.00,
+    account_type VARCHAR(30) NOT NULL,
+    open_date DATE NOT NULL,
+
+    customer_id INT NOT NULL,
+    branch_id INT NOT NULL,
+
+    FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (branch_id)
+        REFERENCES Branch(branch_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO Account (account_no, balance, account_type, open_date, customer_id, branch_id) VALUES
