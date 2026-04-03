@@ -1,11 +1,15 @@
 CREATE TABLE Employee (
-    employee_id INT PRIMARY KEY,
-    employee_name VARCHAR(100),
-    salary DECIMAL(10,2),
-    designation VARCHAR(50),
-    branch_id INT,
-    
-    FOREIGN KEY (branch_id) REFERENCES Branch(branch_id)
+    employee_id INT AUTO_INCREMENT PRIMARY KEY,
+    employee_name VARCHAR(100) NOT NULL,
+    salary DECIMAL(10,2) NOT NULL,
+    designation VARCHAR(50) NOT NULL,
+
+    branch_id INT NOT NULL,
+
+    FOREIGN KEY (branch_id)
+        REFERENCES Branch(branch_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO Employee (employee_id, employee_name, salary, designation, branch_id) VALUES
