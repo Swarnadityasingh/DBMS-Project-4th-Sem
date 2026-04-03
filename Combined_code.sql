@@ -6,9 +6,9 @@ USE Banking_System;
 
 -- CUSTOMER TABLE
 CREATE TABLE Customer (
-    customer_id INT PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
     dob DATE,
     phone VARCHAR(15),
     email VARCHAR(100),
@@ -41,10 +41,10 @@ INSERT INTO Customer (customer_id, first_name, last_name, dob, phone, email, add
 
 -- BRANCH TABLE
 CREATE TABLE Branch (
-    branch_id INT PRIMARY KEY,
-    branch_name VARCHAR(100),
-    IFSC_code VARCHAR(20),
-    city VARCHAR(50)
+    branch_id INT AUTO_INCREMENT PRIMARY KEY,
+    branch_name VARCHAR(100) NOT NULL,
+    IFSC_code VARCHAR(20) UNIQUE NOT NULL,
+    city VARCHAR(50) NOT NULL
 );
 
 INSERT INTO Branch (branch_id, branch_name, IFSC_code, city) VALUES
@@ -75,15 +75,23 @@ INSERT INTO Branch (branch_id, branch_name, IFSC_code, city) VALUES
 -- Customer HAS Account
 -- Account BELONGS TO Branch
 CREATE TABLE Account (
-    account_no INT PRIMARY KEY,
-    balance DECIMAL(12,2),
-    account_type VARCHAR(30),
-    open_date DATE,
-    customer_id INT,
-    branch_id INT,
-    
-    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
-    FOREIGN KEY (branch_id) REFERENCES Branch(branch_id)
+    account_no INT AUTO_INCREMENT PRIMARY KEY,
+    balance DECIMAL(12,2) DEFAULT 0.00,
+    account_type VARCHAR(30) NOT NULL,
+    open_date DATE NOT NULL,
+
+    customer_id INT NOT NULL,
+    branch_id INT NOT NULL,
+
+    FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (branch_id)
+        REFERENCES Branch(branch_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO Account (account_no, balance, account_type, open_date, customer_id, branch_id) VALUES
@@ -113,14 +121,18 @@ INSERT INTO Account (account_no, balance, account_type, open_date, customer_id, 
 -- LOAN TABLE
 -- Customer APPLIES Loan
 CREATE TABLE Loan (
-    loan_id INT PRIMARY KEY,
-    loan_type VARCHAR(50),
-    loan_amount DECIMAL(12,2),
-    duration INT,
-    interest_rate DECIMAL(5,2),
-    customer_id INT,
-    
-    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+    loan_id INT AUTO_INCREMENT PRIMARY KEY,
+    loan_type VARCHAR(50) NOT NULL,
+    loan_amount DECIMAL(12,2) NOT NULL,
+    duration INT NOT NULL,
+    interest_rate DECIMAL(5,2) NOT NULL,
+
+    customer_id INT NOT NULL,
+
+    FOREIGN KEY (customer_id)
+        REFERENCES Customer(customer_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO Loan (loan_id, loan_type, loan_amount, duration, interest_rate, customer_id)VALUES
@@ -150,13 +162,17 @@ INSERT INTO Loan (loan_id, loan_type, loan_amount, duration, interest_rate, cust
 -- TRANSACTIONS TABLE
 -- Account PERFORMS Transactions
 CREATE TABLE Transactions (
-    transaction_id INT PRIMARY KEY,
-    transaction_date DATE,
-    transaction_type VARCHAR(30),
-    amount DECIMAL(12,2),
-    account_no INT,
-    
-    FOREIGN KEY (account_no) REFERENCES Account(account_no)
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    transaction_date DATE NOT NULL,
+    transaction_type VARCHAR(30) NOT NULL,
+    amount DECIMAL(12,2) NOT NULL,
+
+    account_no INT NOT NULL,
+
+    FOREIGN KEY (account_no)
+        REFERENCES Account(account_no)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO Transactions (transaction_id, transaction_date, transaction_type, amount, account_no) VALUES
@@ -186,14 +202,18 @@ INSERT INTO Transactions (transaction_id, transaction_date, transaction_type, am
 -- CARD TABLE
 -- Account ISSUES Card
 CREATE TABLE Card (
-    card_no INT PRIMARY KEY,
-    card_type VARCHAR(30),
-    expiry_date DATE,
-    create_date DATE,
-    card_pin INT,
-    account_no INT,
-    
-    FOREIGN KEY (account_no) REFERENCES Account(account_no)
+    card_no INT AUTO_INCREMENT PRIMARY KEY,
+    card_type VARCHAR(30) NOT NULL,
+    expiry_date DATE NOT NULL,
+    create_date DATE NOT NULL,
+    card_pin INT NOT NULL,
+
+    account_no INT NOT NULL,
+
+    FOREIGN KEY (account_no)
+        REFERENCES Account(account_no)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO Card (card_no, card_type, expiry_date, create_date, card_pin, account_no) VALUES
@@ -223,13 +243,17 @@ INSERT INTO Card (card_no, card_type, expiry_date, create_date, card_pin, accoun
 -- EMPLOYEE TABLE
 -- Employee WORKS IN Branch
 CREATE TABLE Employee (
-    employee_id INT PRIMARY KEY,
-    employee_name VARCHAR(100),
-    salary DECIMAL(10,2),
-    designation VARCHAR(50),
-    branch_id INT,
-    
-    FOREIGN KEY (branch_id) REFERENCES Branch(branch_id)
+    employee_id INT AUTO_INCREMENT PRIMARY KEY,
+    employee_name VARCHAR(100) NOT NULL,
+    salary DECIMAL(10,2) NOT NULL,
+    designation VARCHAR(50) NOT NULL,
+
+    branch_id INT NOT NULL,
+
+    FOREIGN KEY (branch_id)
+        REFERENCES Branch(branch_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 INSERT INTO Employee (employee_id, employee_name, salary, designation, branch_id) VALUES
