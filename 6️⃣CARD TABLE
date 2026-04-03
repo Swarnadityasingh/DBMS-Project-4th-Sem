@@ -1,13 +1,18 @@
 CREATE TABLE Card (
-    card_no INT PRIMARY KEY,
-    card_type VARCHAR(30),
-    expiry_date DATE,
-    create_date DATE,
-    card_pin INT,
-    account_no INT,
-    
-    FOREIGN KEY (account_no) REFERENCES Account(account_no)
+    card_no INT AUTO_INCREMENT PRIMARY KEY,
+    card_type VARCHAR(30) NOT NULL,
+    expiry_date DATE NOT NULL,
+    create_date DATE NOT NULL,
+    card_pin INT NOT NULL,
+
+    account_no INT NOT NULL,
+
+    FOREIGN KEY (account_no)
+        REFERENCES Account(account_no)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
+
 
 INSERT INTO Card (card_no, card_type, expiry_date, create_date, card_pin, account_no) VALUES
 (3001, 'Debit', '2028-12-31', '2023-01-15', 1234, 1001),
