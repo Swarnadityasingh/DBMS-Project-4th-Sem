@@ -1,8 +1,8 @@
 CREATE TABLE Branch (
-    branch_id INT PRIMARY KEY,
-    branch_name VARCHAR(100),
-    IFSC_code VARCHAR(20),
-    city VARCHAR(50)
+    branch_id INT AUTO_INCREMENT PRIMARY KEY,
+    branch_name VARCHAR(100) NOT NULL,
+    IFSC_code VARCHAR(20) UNIQUE NOT NULL,
+    city VARCHAR(50) NOT NULL
 );
 
 INSERT INTO Branch (branch_id, branch_name, IFSC_code, city) VALUES
